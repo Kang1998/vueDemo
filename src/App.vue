@@ -4,7 +4,7 @@
       <router-view></router-view>
     </keep-alive>
     
-    <main-tabbar/>
+    <main-tabbar  expect="/detail"/>
   </div>
 </template>
 

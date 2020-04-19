@@ -18,7 +18,7 @@ export default {
     height: 44px;
     background-color: #1296db;
     line-height: 44px;
-    box-shadow: 0 3px 1px rgba(100, 100, 100, .1);
+    /* box-shadow: 0 3px 1px rgba(100, 100, 100, .1); */
     color: #fff;
   }
 
