@@ -193,6 +193,7 @@ export default {
   #hy-swiper {
     overflow: hidden;
     position: relative;
+    padding-top: 39px;
   }
 
   .slider {

@@ -10,6 +10,8 @@ const Home = () => import('@/views/home/Home.vue')
 const Category = () => import('@/views/category/Category.vue')
 const Profile = () => import('@/views/profile/Profile.vue')
 const ShopCar = () => import('@/views/shopcar/ShopCar.vue')
+const Detail = () => import('@/views/detail/Detail.vue')
+
 
 Vue.use(VueRouter)
 
@@ -30,19 +32,25 @@ const routes = [
     component: TabBar
   },
   {
-    path: '/Category',
+    path: '/category',
     name: 'Category',
     component: Category
   },
   {
-    path: '/Profile',
+    path: '/profile',
     name: 'Profile',
     component: Profile
   },
   {
-    path: '/ShopCar',
+    path: '/shopCar',
     name: 'ShopCar',
     component: ShopCar
+  },
+
+  // 详情页 动态路由
+  {
+    path: '/detail/:id',
+    component: Detail
   }
 ]
 

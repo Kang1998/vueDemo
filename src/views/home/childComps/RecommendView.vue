@@ -29,7 +29,6 @@ export default {
   @import url('~assets/css/base.css');
 
   #recomends {
-    width: 100%;
     display: flex;
     border-bottom: 5px solid rgba(230, 230, 230, .5)
 
@@ -37,8 +36,9 @@ export default {
 
 
   .recom-item {
+    width: 100%;
     margin: 10px 5px;
-    flex-shrink: 1;
+    /* flex-shrink: 1; */
     text-align: center;
     font-size: 14px;
     text-decoration: none;
