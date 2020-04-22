@@ -3,6 +3,11 @@ import App from './App.vue'
 import router from './router'
 import Router from 'vue-router'
 
+// 全局注册Swiper
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper)
+import 'swiper/dist/css/swiper.css'
+
 Vue.config.productionTip = false
 
 // 事件总线定义成一个新的vue实例

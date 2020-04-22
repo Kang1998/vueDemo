@@ -4,9 +4,11 @@ module.exports = {
       alias: {
         'assets': '@/assets',
         'common': '@/common',
+        'content': '@/content',
         'components': '@/components',
         'network': '@/network',
-        'views': '@/views'
+        'views': '@/views',
+        'store' :'@/store'
       }
     }
   }

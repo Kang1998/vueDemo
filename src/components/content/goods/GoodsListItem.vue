@@ -31,13 +31,8 @@ export default {
       // query的router方法
       // this.$router.push({
       //   path: 'detail',
-      //   query: {
-
-      //   }
+      //   query: {'id':this.itemData.iid}
       // })
-
-
-      // console.log(this.itemData.iid);
     }
   },
 }
