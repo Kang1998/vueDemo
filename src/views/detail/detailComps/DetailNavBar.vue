@@ -29,6 +29,7 @@ export default {
   methods: {
     backClick() {
       this.$router.back()
+      this.$emit('refresh')
     }
   },
 }

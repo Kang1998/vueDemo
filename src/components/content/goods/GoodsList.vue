@@ -16,16 +16,14 @@ export default {
   props: {
     goods: {
       type: Array,
-      default() {
-        return []
-      }
+      default: []
     },
     currentType: 'pop'
   }
 }
 </script>
 
-<style>
+<style scoped>
   .goods {
     display: flex;
     flex-wrap:wrap;
@@ -35,7 +33,7 @@ export default {
   .goods-item {
     padding-bottom: 5px;
     width: 48%;
-    flex-shrink: 0;
+    flex-shrink: 1;
     font-size: 12px;
     overflow: hidden;
   }

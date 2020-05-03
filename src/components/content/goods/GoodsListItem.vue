@@ -2,9 +2,11 @@
   <div class="item-info" @click="itemClick" >
       <img :src="itemData.show.img" @load="imgLoad" alt="">
       <div class="detail">
-        <span>{{itemData.title}}</span>
-        <span>原价：<del>{{itemData.orgPrice}}</del></span><br>
-        <span class="price">仅售: ￥{{itemData.price}}</span>
+        <div class="desc">{{itemData.title}}</div>
+        <div class="price">
+          <span>仅售: ￥{{itemData.price}}</span>
+          <span><del>{{itemData.orgPrice}}</del></span>
+        </div>
       </div>
   </div>
 </template>
@@ -38,24 +40,25 @@ export default {
 }
 </script>
 
-<style> 
-  .item-info img {
-    border-radius: 5%;
+<style scoped> 
+  .item-info {
+    color:rgb(204, 204, 204);
   }
-
-  .detail {
-    position: relative;
-  }
-
-  .detail>span:first-child {
-    white-space: nowrap;
-    color: #000;
+  
+  .desc {
+    margin: 4px 0;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
-  
   .price {
-    color: hotpink
+    display: flex;
+    justify-content: space-between;
+    color: rgb(18, 150, 219);
+    margin-bottom: 4px;
+  }
+  .price > div {
+    flex: 1; 
   }
 </style>

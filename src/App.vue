@@ -4,7 +4,7 @@
       <router-view></router-view>
     </keep-alive>
     
-    <main-tabbar  expect="/detail"/>
+    <main-tabbar v-if="true"/>
   </div>
 </template>
 
@@ -14,9 +14,11 @@ export default {
   name: 'App',
   components: {
     MainTabbar,
-  }
+  },
 }
+
+
 </script>
 
-<style>
+<style scoped>
 </style>

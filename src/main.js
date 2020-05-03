@@ -2,11 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import Router from 'vue-router'
+import store from './store'
 
 // 全局注册Swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+
 Vue.use(VueAwesomeSwiper)
 import 'swiper/dist/css/swiper.css'
+import './assets/css/base.css'
 
 Vue.config.productionTip = false
 
@@ -15,6 +18,7 @@ Vue.prototype.$bus = new Vue();
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')
 

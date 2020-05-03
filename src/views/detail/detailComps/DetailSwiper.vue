@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
   .slide-item {
-    height: 30vh;
+    height: 40vh;
   }
 
   .swiper-pagination {

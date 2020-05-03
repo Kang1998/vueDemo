@@ -29,6 +29,9 @@ import RecommendView from './childComps/RecommendView'
 
 // 网络请求
 import {getMultiData, getGoodsData} from 'network/home.js'
+
+// 工具类
+import {debounce} from 'assets/utils/debounce'
 export default {
   name: "Home",
   data() {
@@ -67,35 +70,16 @@ export default {
     this.getHomeGoods('pop');
     this.getHomeGoods('new');
     this.getHomeGoods('sell');
-
-
-
-
   },
 
   mounted() {
         // 3事件总线的监听
     this.$bus.$on('imgLoad',() => {
-      // this.$refs.scroll.scroll.refresh()
-      // this.refresh()
-      this.debounce(this.$refs.scroll.scroll.refresh, 100)
-      // this.debounce(this.$refs.scroll.scroll.refresh)
+      debounce(this.$refs.scroll.scroll.refresh(),1000)
     })
   },
 
   methods: {
-
-    // 防抖节流函数。
-    debounce(func, delay) {
-      let timer = null;
-      return function (...args) {
-        if(timer) clearTimeout(timer)
-          timer = setTimeout(() => {
-            func.apply(this, args)
-          }, delay);
-        }
-    },
-
     loadMore: function() {
       this.getHomeGoods(this.currentType)
     },
@@ -127,7 +111,7 @@ export default {
       getMultiData().then(res => {
       this.banners = res.data.banner.list;
       this.recommends = res.data.recommend.list;
-      console.log(res);
+      // console.log(res);
       })
     },
 
@@ -142,7 +126,11 @@ export default {
         this.$refs.scroll.scroll.finishPullUp()
       })
     }
-  } 
+  },
+  activated() {
+    this.$refs.scroll.scroll.refresh()
+  },
+
 }
 </script>
 

@@ -26,9 +26,13 @@ export default {
 </script>
 
 <style>
-  @import url('~assets/css/base.css');
+  a,a:visited {
+    text-decoration: none;
+    color:black;
+  }
 
   #recomends {
+    width: 100%;
     display: flex;
     border-bottom: 5px solid rgba(230, 230, 230, .5)
 
